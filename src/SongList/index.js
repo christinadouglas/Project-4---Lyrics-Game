@@ -11,7 +11,7 @@ const Songs = (props) => {
         <span>{song.albumTitle}</span><br/>
         <span>{song.lyrics}</span><br/>
         <button onClick={props.deleteSong.bind(null, song._id)}>Delete</button><br/>
-        <button onClick={props.showModal.bind(null, song)}>edit</button>
+        <button onClick={props.showModal.bind(null, song)}>Edit</button>
       </li>
 
       )
