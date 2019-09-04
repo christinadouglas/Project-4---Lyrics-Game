@@ -156,6 +156,7 @@ class SongContainer extends Component {
     return (
       <div className='song-container'>
         <Header/>
+        <h2>Add your own lyrics!</h2>
         <AddSong addSong={this.addSong}/>
         <SongList songs={this.state.songs} showModal={this.showModal} deleteSong={this.deleteSong}/>
         {this.state.showEditModal ? <EditSong closeAndEdit={this.closeAndEdit} songToEdit={this.state.songToEdit} handleFormChange={this.handleFormChange}/> : null}

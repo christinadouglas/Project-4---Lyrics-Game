@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-
 class AddSong extends Component {
   constructor(){
     super();
@@ -8,7 +7,8 @@ class AddSong extends Component {
       songTitle: '',
       artist: '',
       albumTitle: '',
-      lyrics: ''
+      lyrics: '', 
+      genre: ''
     }
   }
   updateSong = (e) => {

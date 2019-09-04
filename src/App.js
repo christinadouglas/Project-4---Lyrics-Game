@@ -4,6 +4,7 @@ import SongContainer from './SongContainer';
 import { Route, Switch } from 'react-router-dom';
 import Game from './WordGame'
 import Home from './Home'
+import Song from './Song'
 
 const My404 = () => {
   return (
@@ -16,12 +17,13 @@ const My404 = () => {
 function App() {
   return (
     <div className="App">
-    <Switch>
-    <Route exact path='/' component= { Home }/>
-    <Route exact path='/songs' component={ SongContainer }/>
-    <Route exact path='/game' component={ Game }/>
-    <Route component={My404} />
-    </Switch>
+      <Switch>
+        <Route exact path='/' component= { Home }/>
+        <Route exact path='/songs' component={ SongContainer }/>
+        <Route exact path='/game' component={ Game }/>
+        <Route exact path='/songs/:id' component= { Song } />
+        <Route component={My404} />
+      </Switch>
     </div>
   );
 }

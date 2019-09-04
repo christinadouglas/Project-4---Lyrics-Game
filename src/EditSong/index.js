@@ -8,19 +8,19 @@ const EditSong = (props) =>  {
       <h2> Edit Song</h2>
       <Form onSubmit={props.closeAndEdit}>
         <Label>
-          Edit Song:
+          Song Title:
           <Form.Input type="text" name="title" onChange={props.handleFormChange} value={props.songToEdit.songTitle}/>
         </Label>
         <Label>
-          Edit Artist:
+          Artist:
           <Form.Input type="text" name="artist" onChange={props.handleFormChange} value={props.songToEdit.artist}/>
         </Label>
         <Label>
-          Edit Album Title:
+          Album Title:
           <Form.Input type="text" name="albumTitle" onChange={props.handleFormChange} value={props.songToEdit.albumTitle}/>
         </Label>
         <Label>
-          Edit Lyrics:
+          Lyrics:
           <Form.TextArea type="text" name="lyrics" onChange={props.handleFormChange} value={props.songToEdit.lyrics}/>
         </Label>
         <Button type='Submit'>Edit</Button>
