@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import AddSong from '../AddSong';
 import SongList from '../SongList';
 import EditSong from '../EditSong';
+import Header from '../Header'
 
 class SongContainer extends Component {
   constructor(){
@@ -154,6 +155,7 @@ class SongContainer extends Component {
     console.log(this.state, "< state in render");
     return (
       <div className='song-container'>
+        <Header/>
         <AddSong addSong={this.addSong}/>
         <SongList songs={this.state.songs} showModal={this.showModal} deleteSong={this.deleteSong}/>
         {this.state.showEditModal ? <EditSong closeAndEdit={this.closeAndEdit} songToEdit={this.state.songToEdit} handleFormChange={this.handleFormChange}/> : null}
