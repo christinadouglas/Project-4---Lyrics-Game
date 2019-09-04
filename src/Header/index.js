@@ -1,12 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Menu } from 'semantic-ui-react'
 
 
 const Header = () => {
   return (
     <header>
-        <Link to='/songs'>Songs</Link>
-        <Link to='/game'>Game</Link>
+        <Menu>
+            <Menu.Item>
+                <Link to='/songs'>Songs</Link>
+            </Menu.Item>
+            <Menu.Item>
+                <Link to='/game'>Game</Link>
+            </Menu.Item>
+        </Menu>
     </header>
     )
 }
