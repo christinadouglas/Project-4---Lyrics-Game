@@ -8,6 +8,9 @@ const Header = () => {
     <header>
         <Menu>
             <Menu.Item>
+            <Link to='/'>Home</Link>
+            </Menu.Item>
+            <Menu.Item>
                 <Link to='/songs'>Songs</Link>
             </Menu.Item>
             <Menu.Item>
