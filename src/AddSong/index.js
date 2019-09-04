@@ -21,7 +21,7 @@ class AddSong extends Component {
     return (
       // <form onSubmit={this.props.addSong.bind(null, this.state)}>
         <form>
-        <label htmlFor="title">Song:
+        <label htmlFor="title">Song Title:
           <input type="text" name="title" onChange={this.updateSong} value={this.state.songTitle}/>
         </label>
         <label htmlFor="artist">Artist:
