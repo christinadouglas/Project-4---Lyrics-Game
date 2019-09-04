@@ -31,7 +31,7 @@ class AddSong extends Component {
           <input type="text" name="albumTitle" onChange={this.updateSong} value={this.state.albumTitle}/>
         </label>
         <label htmlFor="lyrics">Lyrics:
-          <input type="text" name="lyrics" onChange={this.updateSong} value={this.state.lyrics}/>
+          <textarea type="text" name="lyrics" onChange={this.updateSong} value={this.state.lyrics}/>
         </label>
         <button type='submit'>
           Add Song
