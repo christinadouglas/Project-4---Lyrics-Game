@@ -14,7 +14,7 @@ const Header = () => {
                 <Link to='/songs'>Songs</Link>
             </Menu.Item>
             <Menu.Item>
-                <Link to='/game'>Game</Link>
+                <Link to='/game'>Play Game</Link>
             </Menu.Item>
         </Menu>
     </header>
