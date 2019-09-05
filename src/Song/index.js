@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
+import Header from '../Header'
 
 class Song extends Component {
     state = {
@@ -56,6 +57,7 @@ class Song extends Component {
         console.log(this.state.lyrics)
         return (
             <div>
+            <Header/>
                 {this.state.song.songTitle}
                 <div>
                     {this.state.lyrics.map((l,i) => 
@@ -64,7 +66,7 @@ class Song extends Component {
                             : <span onClick={() => this.makeInput(i)}>{l} </span>
                     )}
                 </div>
-                <button onClick={this.checkWord}>check</button>
+                <button onClick={this.checkWord}>Check Answer</button>
                 {this.state.isWinner &&  "You Won!"}
             </div>
         )
@@ -73,6 +75,3 @@ class Song extends Component {
 
 export default withRouter(Song)
 
-// split -> make string an array
-// substing 
-// math.random 

@@ -23,6 +23,10 @@ const EditSong = (props) =>  {
           Lyrics:
           <Form.TextArea type="text" name="lyrics" onChange={props.handleFormChange} value={props.songToEdit.lyrics}/>
         </Label>
+        <Label>
+          Video:
+          <Form.TextArea type="text" name="video" onChange={props.handleFormChange} value={props.songToEdit.video}/>
+        </Label>
         <Button type='Submit'>Edit</Button>
       </Form>
     </div>

@@ -16,7 +16,8 @@ class SongContainer extends Component {
         songTitle: '',
         artist: '',
         albumTitle: '',
-        lyrics: ''
+        lyrics: '',
+        video: ''
       }
     }
   }
