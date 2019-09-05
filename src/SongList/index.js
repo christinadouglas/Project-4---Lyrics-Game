@@ -7,10 +7,10 @@ const Songs = (props) => {
     return (
       <div className="ui list">
       <li key={song._id}>
-        <span>Song Title: {song.songTitle}</span><br/>
+        <span fontWeight='bold'>Song Title: {song.songTitle}</span><br/>
         <span>Artist: {song.artist}</span><br/>
         <span>Album Title: {song.albumTitle}</span><br/>
-        <span>Song Lyrics: {song.lyrics}</span><br/>
+        <span>Lyrics: {song.lyrics}</span><br/>
         <button onClick={props.deleteSong.bind(null, song._id)}>Delete</button><br/>
         <button onClick={props.showModal.bind(null, song)}>Edit</button>
       </li>

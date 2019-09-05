@@ -9,7 +9,7 @@ const EditSong = (props) =>  {
       <Form onSubmit={props.closeAndEdit}>
         <Label>
           Song Title:
-          <Form.Input type="text" name="title" onChange={props.handleFormChange} value={props.songToEdit.songTitle}/>
+          <Form.Input type="text" name="songTitle" onChange={props.handleFormChange} value={props.songToEdit.songTitle}/>
         </Label>
         <Label>
           Artist:
