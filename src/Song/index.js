@@ -4,14 +4,19 @@ import Header from '../Header'
 
 class Song extends Component {
     state = {
-        song: {
-        },
+        song: {},
         num: null,
         lyrics: [],
         isWinner: false,
         copyLyrics: []
     }
-    async componentDidMount() {
+
+    componentDidMount() {
+        this.getSong()
+    }
+
+
+    getSong = async () => {
         const id = this.props.match.params.id
         const song = await(await fetch(`http://localhost:9000/api/v1/songs/${id}`)).json()
         const lyricsArray = song.data.lyrics.split(' ')
@@ -22,7 +27,9 @@ class Song extends Component {
             song: song.data,
             lyrics: lyricsArray,
             copyLyrics: [...lyricsArray],
-            word
+            word,
+            isWinner: false,
+            id
         })
     }
 
@@ -51,10 +58,14 @@ class Song extends Component {
             num: null,
             lyrics: isWinner ? [...this.state.lyrics] : [...this.state.copyLyrics]
         })
+        if(isWinner) {
+            
+        }
     }
 
     render() {
         console.log(this.state.lyrics)
+        if (this.state.id !== this.props.match.params.id) { this.getSong() }
         return (
             <div>
             <Header/>
@@ -67,7 +78,12 @@ class Song extends Component {
                     )}
                 </div>
                 <button onClick={this.checkWord}>Check Answer</button>
-                {this.state.isWinner &&  "You Won!"}
+                {this.state.isWinner &&
+                    <div>
+                        "You Won!"
+                        <button onClick={() => this.props.playGame()}>Next Round</button>
+                    </div>
+                }
             </div>
         )
     }

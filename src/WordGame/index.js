@@ -43,8 +43,8 @@ class Game extends Component {
        return (
             <div className="game-container">
             <Header/>
-            <h2>Welcome to Game!</h2>
-            <button onClick={this.playGame}>Play</button>
+            <h2>Start Playing!</h2>
+            <button onClick={this.props.playGame}>Play</button>
             </div>
         )
    } 

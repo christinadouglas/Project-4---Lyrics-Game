@@ -1,3 +1,13 @@
+body {
+  background-image:
+  linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+   url("https://i.ibb.co/zQ8fnyW/wp2003429.jpg");
+  color: white;
+}
+
 .App {
   text-align: center;
 }
@@ -7,6 +17,7 @@
   height: 40vmin;
   pointer-events: none;
 }
+
 
 .App-header {
   background-color: #282c34;

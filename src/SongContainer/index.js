@@ -3,6 +3,7 @@ import AddSong from '../AddSong';
 import SongList from '../SongList';
 import EditSong from '../EditSong';
 import Header from '../Header'
+import { Container } from 'semantic-ui-react'
 
 class SongContainer extends Component {
   constructor(){
@@ -16,8 +17,7 @@ class SongContainer extends Component {
         songTitle: '',
         artist: '',
         albumTitle: '',
-        lyrics: '',
-        video: ''
+        lyrics: ''
       }
     }
   }
