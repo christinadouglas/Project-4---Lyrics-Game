@@ -55,14 +55,21 @@ getSongs = async () => {
       this.props.history.push(`/songs/${id}`)
   }
 
+  updateSongList = (songId) => {
+   this.setState({
+     songs: this.state.songs.filter(s => s !== songId)
+   })
+  }
+
   render() {
+    console.log(this.state.songs)
     return (
       <div className="App">
         <Switch>
           <Route exact path='/' component= { Home }/>
           <Route exact path='/songs' component={ SongContainer }/>
           <Route exact path='/game' render={() =>  <Game playGame={this.playGame} /> }/>
-          <Route exact path='/songs/:id' render= {() => <Song playGame={this.playGame} />} />
+          <Route exact path='/songs/:id' render= {() => <Song updateSongList={this.updateSongList} playGame={this.playGame} />} />
           <Route component={My404} />
         </Switch>
       </div>

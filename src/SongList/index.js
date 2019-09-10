@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from 'semantic-ui-react'
 
 const Songs = (props) => {
   console.log(props, ' properties in songList')
@@ -11,8 +12,8 @@ const Songs = (props) => {
         <span>Artist: {song.artist}</span><br/>
         <span>Album Title: {song.albumTitle}</span><br/>
         <span>Lyrics: {song.lyrics}</span><br/>
-        <button onClick={props.deleteSong.bind(null, song._id)}>Delete</button><br/>
-        <button onClick={props.showModal.bind(null, song)}>Edit</button>
+        <Button onClick={props.deleteSong.bind(null, song._id)}>Delete</Button><br/>
+        <Button onClick={props.showModal.bind(null, song)}>Edit</Button>
       </li>
       </div>
       )
@@ -20,7 +21,7 @@ const Songs = (props) => {
 
   return (
     <div>
-      <h3>Song Lyrics</h3>
+      <h2>Song Lyrics</h2>
       <ul>
         {songList}
       </ul>

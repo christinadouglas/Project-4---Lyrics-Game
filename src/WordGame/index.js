@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from '../Header'
+import { Button } from 'semantic-ui-react'
 
 class Game extends Component {
     state = {
@@ -44,7 +45,7 @@ class Game extends Component {
             <div className="game-container">
             <Header/>
             <h2>Start Playing!</h2>
-            <button onClick={this.props.playGame}>Play</button>
+            <Button onClick={this.props.playGame}>Play</Button>
             </div>
         )
    } 

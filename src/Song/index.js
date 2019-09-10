@@ -29,7 +29,8 @@ class Song extends Component {
             copyLyrics: [...lyricsArray],
             word,
             isWinner: false,
-            id
+            id,
+            random
         })
     }
 
@@ -59,7 +60,8 @@ class Song extends Component {
             lyrics: isWinner ? [...this.state.lyrics] : [...this.state.copyLyrics]
         })
         if(isWinner) {
-            
+            const songId = this.props.match.params.id
+            this.props.updateSongList(songId)
         }
     }
 
@@ -74,7 +76,9 @@ class Song extends Component {
                     {this.state.lyrics.map((l,i) => 
                         (this.state.num === i)
                             ? <input type='text' onChange={(e) => this.onChange(e,i)}/>
-                            : <span onClick={() => this.makeInput(i)}>{l} </span>
+                            : (this.state.random === i) 
+                                ? <span onClick={() => this.makeInput(i)}>{l} </span>
+                                : <span>{l} </span>
                     )}
                 </div>
                 <button onClick={this.checkWord}>Check Answer</button>

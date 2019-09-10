@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Button } from 'semantic-ui-react'
 
 class AddSong extends Component {
   constructor(){
@@ -29,9 +30,9 @@ class AddSong extends Component {
         <label htmlFor="lyrics">Lyrics:
           <textarea type="text" name="lyrics" onChange={this.updateSong} value={this.state.lyrics}/>
         </label>
-        <button type='submit'>
+        <Button type='submit'>
           Add Song
-        </button>
+        </Button>
       </form>
       )
   }
