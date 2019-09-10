@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 import Header from '../Header'
+import { Button } from 'semantic-ui-react'
 
 import './style.css'
 
@@ -83,7 +84,7 @@ class Song extends Component {
                                 : <span>{l} </span>
                     )}
                 </div>
-                <button onClick={this.checkWord}>Check Answer</button>
+                <Button onClick={this.checkWord}>Check Answer</Button>
                 {this.state.isWinner &&
                     <div>
                         "You Won!"

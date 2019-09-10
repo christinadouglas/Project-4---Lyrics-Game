@@ -30,7 +30,7 @@ class AddSong extends Component {
         <label htmlFor="lyrics">Lyrics:
           <textarea type="text" name="lyrics" onChange={this.updateSong} value={this.state.lyrics}/>
         </label>
-        <Button type='submit'>
+        <Button id="button" type='submit'>
           Add Song
         </Button>
       </form>
