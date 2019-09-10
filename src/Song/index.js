@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 import Header from '../Header'
 
+import './style.css'
+
 class Song extends Component {
     state = {
         song: {},
@@ -71,7 +73,7 @@ class Song extends Component {
         return (
             <div>
             <Header/>
-                {this.state.song.songTitle}
+                <h2>{this.state.song.songTitle}</h2>
                 <div>
                     {this.state.lyrics.map((l,i) => 
                         (this.state.num === i)
